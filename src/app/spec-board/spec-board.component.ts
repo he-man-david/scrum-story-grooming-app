@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./spec-board.component.css']
 })
 export class SpecBoardComponent implements OnInit {
+  something = "testing..."
 
   constructor() { }
 

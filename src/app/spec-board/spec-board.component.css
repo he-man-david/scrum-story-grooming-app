@@ -1,5 +1,6 @@
 #spec-board-wrapper {
-    max-width: 900px;
+    min-width: 700px;
+    max-width: 100vw;
     padding: 20px;
     background-color: #FDFEFE;
 }
