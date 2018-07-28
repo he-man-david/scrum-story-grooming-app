@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { SpecBoardComponent } from './spec-board/spec-board.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SpecBoardComponent
   ],
   imports: [
     BrowserModule
