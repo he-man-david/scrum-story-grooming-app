@@ -1,6 +1,10 @@
-#spec-board-wrapper {
+.spec-board-wrapper {
     min-width: 700px;
     max-width: 100vw;
     padding: 20px;
     background-color: #FDFEFE;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
 }

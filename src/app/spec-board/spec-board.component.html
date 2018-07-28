@@ -1,3 +1,9 @@
-<div id="spec-board-wrapper">
-  <spec-beans [specName]="something"></spec-beans>
+<h5>Development</h5>
+<div class="spec-board-wrapper">
+  <spec-beans [specName]="devSpec" *ngFor="let devSpec of developmentSpecs"></spec-beans>
 </div>
+<h5>Testing</h5>
+<div class="spec-board-wrapper">
+    <spec-beans [specName]="testSpec" *ngFor="let testSpec of testingSpecs"></spec-beans>
+</div>
+
