@@ -1,4 +1,4 @@
-{
+export const specData = {
     "development": {
         "Static text": 1,
         "Dynamic text": 2,
@@ -7,7 +7,7 @@
         "Re-focus": 1.5,
         "New tech": 3,
         "Spanish": 1.5,
-        "Accessibility": 50 
+        "Accessibility": 1.5
     },
     "testing": {
         "multiple accounts": 2,
