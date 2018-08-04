@@ -1,4 +1,6 @@
-<span class="specBean">
+<span (click)="selectSpec(specName)" 
+      class="specBean" 
+      [ngClass]="{'yellowBeans': color === 'yellow', 'purpleBeans': color === 'purple', 'greenBeans': color === 'green'}">
   {{ specName }}
   <span *ngIf="count > 0" class="beanCount">{{ count }}</span>
 </span>
