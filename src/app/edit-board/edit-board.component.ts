@@ -9,27 +9,37 @@ import  { specData } from '../specData';
 })
 export class EditBoardComponent implements OnInit {
 
-  allSpecs: object[] = [];
+  allDevSpecs: object[] = [];
+  allTestSpecs: object[] = [];
 
   constructor(private router: Router) { }
 
   ngOnInit() {
-    this.configureAllSpecsArr()
+    let devSpecs = { ...specData.development };
+    let testSpecs = { ...specData.testing };
+    this.allDevSpecs = this.configureAllSpecsArr(devSpecs);
+    this.allTestSpecs = this.configureAllSpecsArr(testSpecs);
   }
 
-  configureAllSpecsArr() {
-    let specsObj = { ...specData.development, ...specData.testing };
+  configureAllSpecsArr(specsObj) {
     let specObjKeys = Object.keys(specsObj);
+    let specArr = []
     for(let i = 0; i < specObjKeys.length; i++) {
       let obj = {}
-      let key = specObjKeys[i];
-      obj[key] = specsObj[key];
-      this.allSpecs.push(obj)
+      let name = specObjKeys[i];
+      obj["name"] = name;
+      obj["point"] = specsObj[name];
+      specArr.push(obj)
     }
+    return specArr
   }
 
   goHome() {
     this.router.navigate(['/home'])
+  }
+
+  confirmModal() {
+    alert("Are you sure?")
   }
 
 
