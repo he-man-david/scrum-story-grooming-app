@@ -1,0 +1,9 @@
+#homeButton {
+    float: left;
+    color: white;
+    text-decoration: underline;
+}
+
+#homeButton:hover {
+    cursor: pointer;
+}
