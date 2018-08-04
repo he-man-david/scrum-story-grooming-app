@@ -1,4 +1,10 @@
 #appBody {
     display: flex;
     justify-content: center;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.spec-board {
+    text-align: center;
 }
