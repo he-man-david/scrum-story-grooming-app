@@ -42,6 +42,12 @@ export class EditBoardComponent implements OnInit {
     alert("Are you sure?")
   }
 
-
+  addRow(type) {
+    if (type === "dev") {
+      this.allDevSpecs.push({'enter name here': 'enter point'})
+    } else {
+      this.allTestSpecs.push({'enter name here': 'enter point'})
+    }
+  }
 
 }
