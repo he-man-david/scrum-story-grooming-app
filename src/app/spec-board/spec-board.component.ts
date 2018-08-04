@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import  { specData } from '../specData';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'spec-board',
@@ -14,7 +15,7 @@ export class SpecBoardComponent implements OnInit {
   selectedSpecsObj: object = {};
   totalPoint: number = 0;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
     this.developmentSpecs = Object.keys(specData.development);
@@ -51,10 +52,13 @@ export class SpecBoardComponent implements OnInit {
   }
 
   clearAll() {
-    console.log("hey", this.totalPoint);
     this.totalPoint = 0;
     this.selectedSpecsArr = [];
     this.selectedSpecsObj = {};
+  }
+
+  editPage() {
+    this.router.navigate(['edit'])
   }
 
 }

@@ -15,9 +15,27 @@
     text-decoration: underline;
 }
 
+#clearButton:hover {
+    cursor: pointer;
+}
+
+#editButton {
+    float: left;
+    color: white;
+    text-decoration: underline;
+}
+
+#editButton:hover {
+    cursor: pointer;
+}
+
 #totalPoint {
     color: #3498DB;
     font-size: 80px;
     margin-top: 80px;
     margin-bottom: 0px;
+}
+
+#spec-board-container {
+    text-align: center;
 }
