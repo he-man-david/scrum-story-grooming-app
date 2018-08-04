@@ -1,1 +1,45 @@
 <h3 id="homeButton" (click)="goHome()">Back</h3>
+<br>
+<div class="tableDiv">
+  <h3>Development:</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Bean Name:</th>
+        <th>Points:</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let spec of allDevSpecs">
+        <td>
+          <input type="text" value="{{spec.name}}">
+        </td>
+        <td>
+          <input type="text" value="{{spec.point}}">
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h3>Testing:</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Bean Name:</th>
+        <th>Points:</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let spec of allTestSpecs">
+        <td>
+          <input type="text" value="{{spec.name}}">
+        </td>
+        <td>
+          <input type="text" value="{{spec.point}}">
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <!-- submit edit updates -->
+  <button (click)="confirmModal()" type="submit">Update</button>
+</div>
