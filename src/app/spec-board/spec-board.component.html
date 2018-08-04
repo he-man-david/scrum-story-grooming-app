@@ -1,16 +1,29 @@
-<h5>Development</h5>
-<div class="spec-board-wrapper">
-  <spec-beans [specName]="devSpec" *ngFor="let devSpec of developmentSpecs"></spec-beans>
+<h3 (click)="clearAll()" id="clearButton">Clear</h3>
+<div id="spec-board-container">
+    <p id="totalPoint">{{ totalPoint }}</p>
+    <h3 [ngStyle]="{'color': '#27AE60'}">Selected</h3>
+    <div class="spec-board-wrapper">
+        <spec-beans *ngFor="let selected of selectedSpecsArr"
+                     [specName]="selected"
+                     [count]="selectedSpecsObj[selected]"
+                     (selected)="deselectSpec($event)"
+                     color="green"
+        ></spec-beans>
+    </div>
+    <h3 [ngStyle]="{'color': '#7D3C98'}">Development</h3>
+    <div class="spec-board-wrapper">
+      <spec-beans color="purple" 
+                  (selected)="selectedSpec($event)" 
+                  [specName]="devSpec" 
+                  *ngFor="let devSpec of developmentSpecs"></spec-beans>
+    </div>
+    <h3 [ngStyle]="{'color': '#D4AC0D'}">Testing</h3>
+    <div class="spec-board-wrapper">
+        <spec-beans color="yellow" 
+                    (selected)="selectedSpec($event)" 
+                    [specName]="testSpec" 
+                    *ngFor="let testSpec of testingSpecs"></spec-beans>
+    </div>
 </div>
-<h5>Testing</h5>
-<div class="spec-board-wrapper">
-    <spec-beans [specName]="testSpec" *ngFor="let testSpec of testingSpecs"></spec-beans>
-</div>
-<h5>Selected</h5>
-<div class="spec-board-wrapper">
-    <spec-beans *ngFor="let selected of selectedSpecsArr"
-                 [specName]="selected"
-                 [count]="selectedSpecsObj.selected"
-    ></spec-beans>
-</div>
+
 

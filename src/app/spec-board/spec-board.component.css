@@ -1,10 +1,23 @@
 .spec-board-wrapper {
-    min-width: 700px;
-    max-width: 100vw;
-    padding: 20px;
-    background-color: #FDFEFE;
     display: flex;
     justify-content: center;
+    align-content: space-between;
     flex-wrap: wrap;
-    margin: 20px 0;
+}
+
+.spec-board-wrapper > spec-beans {
+    margin-top: 20px;
+}
+
+#clearButton {
+    float: right;
+    color: white;
+    text-decoration: underline;
+}
+
+#totalPoint {
+    color: #3498DB;
+    font-size: 80px;
+    margin-top: 80px;
+    margin-bottom: 0px;
 }
