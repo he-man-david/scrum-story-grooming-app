@@ -2,20 +2,20 @@
 <br>
 <div class="tableDiv">
   <h3>Development:</h3>
-  <table>
+  <table class="table">
     <thead>
       <tr>
-        <th>Bean Name:</th>
-        <th>Points:</th>
+        <th scope="col">Bean Name:</th>
+        <th scope="col">Points:</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let spec of allDevSpecs">
         <td>
-          <input class="form-control" type="text" value="{{spec.name}}">
+          <input class="editInputBox" type="text" value="{{spec.name}}">
         </td>
         <td>
-          <input type="text" value="{{spec.point}}">
+          <input class="editInputBox" type="text" value="{{spec.point}}">
         </td>
       </tr>
       <button (click)="addRow('dev')">Add Row</button>
@@ -32,10 +32,10 @@
     <tbody>
       <tr *ngFor="let spec of allTestSpecs">
         <td>
-          <input type="text" value="{{spec.name}}">
+          <input class="editInputBox" type="text" value="{{spec.name}}">
         </td>
         <td>
-          <input type="text" value="{{spec.point}}">
+          <input class="editInputBox" type="text" value="{{spec.point}}">
         </td>
       </tr>
       <button (click)="addRow('test')">Add Row</button>
