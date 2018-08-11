@@ -20,3 +20,15 @@
 .editInputBox {
     border-radius: 8px;
 }
+
+.addRowButton {
+    margin-bottom: 22px;
+}
+
+.developmentTextColor {
+    color: #7D3C98;
+}
+
+.testingTextColor {
+    color: #D4AC0D;
+}

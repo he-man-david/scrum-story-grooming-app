@@ -1,47 +1,47 @@
 <h3 id="homeButton" (click)="goHome()">Back</h3>
 <br>
 <div class="tableDiv">
-  <h3>Development:</h3>
-  <table class="table">
+  <h3 class="developmentTextColor">Development:</h3>
+  <table class="table table-borderless">
     <thead>
       <tr>
-        <th scope="col">Bean Name:</th>
-        <th scope="col">Points:</th>
+        <th class="developmentTextColor" scope="col"><h3>Beans</h3></th>
+        <th class="developmentTextColor" scope="col"><h3>Points</h3></th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let spec of allDevSpecs">
         <td>
-          <input class="editInputBox" type="text" value="{{spec.name}}">
+          <input class="form-control" type="text" value="{{spec.name}}">
         </td>
         <td>
-          <input class="editInputBox" type="text" value="{{spec.point}}">
+          <input class="form-control" type="text" value="{{spec.point}}">
         </td>
       </tr>
-      <button (click)="addRow('dev')">Add Row</button>
     </tbody>
   </table>
-  <h3>Testing:</h3>
-  <table>
+  <button type="button" class="btn btn-primary addRowButton" (click)="addRow('dev')">+</button>
+  <h3 class="testingTextColor">Testing:</h3>
+  <table class="table table-borderless">
     <thead>
       <tr>
-        <th>Bean Name:</th>
-        <th>Points:</th>
+        <th class="testingTextColor" scope="col"><h3>Beans</h3></th>
+        <th class="testingTextColor" scope="col"><h3>Points</h3></th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let spec of allTestSpecs">
         <td>
-          <input class="editInputBox" type="text" value="{{spec.name}}">
+          <input class="form-control" type="text" value="{{spec.name}}">
         </td>
         <td>
-          <input class="editInputBox" type="text" value="{{spec.point}}">
+          <input class="form-control" type="text" value="{{spec.point}}">
         </td>
       </tr>
-      <button (click)="addRow('test')">Add Row</button>
     </tbody>
   </table>
+  <button type="button" class="btn btn-primary addRowButton" (click)="addRow('test')">+</button>
   
   <!-- submit edit updates -->
-  <button (click)="confirmModal()" type="submit">Update</button>
+  <button class="btn btn-outline-warning" (click)="confirmModal()" type="submit">Update</button>
 </div>
