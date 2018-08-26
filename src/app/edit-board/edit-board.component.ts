@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import  { specData } from '../specData';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { EditConfirmModalComponent } from './edit-confirm-modal/edit-confirm-modal.component';
 
 @Component({
   selector: 'app-edit-board',
@@ -12,7 +14,7 @@ export class EditBoardComponent implements OnInit {
   allDevSpecs: object[] = [];
   allTestSpecs: object[] = [];
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private modalService: NgbModal) { }
 
   ngOnInit() {
     let devSpecs = { ...specData.development };
@@ -48,6 +50,10 @@ export class EditBoardComponent implements OnInit {
     } else {
       this.allTestSpecs.push({'enter name here': 'enter point'})
     }
+  }
+
+  open() {
+    const modalRef = this.modalService.open(EditConfirmModalComponent);
   }
 
 }
