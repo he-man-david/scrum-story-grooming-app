@@ -40,10 +40,6 @@ export class EditBoardComponent implements OnInit {
     this.router.navigate(['/home'])
   }
 
-  confirmModal() {
-    alert("Are you sure?")
-  }
-
   addRow(type) {
     if (type === "dev") {
       this.allDevSpecs.push({'enter name here': 'enter point'})
