@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import  { specData } from '../specData';
+import { specData } from '../specData';
 import { Router } from '@angular/router';
 
 @Component({
